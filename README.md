@@ -3,20 +3,25 @@ Small project built as part of my internship at ThoughtClan Technologies.
 Utilizes gemini to review leetcode style question in either python or c++
 
 ================================== Test Cases ============================
+
 Question:
 Leetcode 1: Two Sum
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
 Solution:
+```
 def twoSum(nums, target):
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
             if nums[i] + nums[j] == target:
                 return [i, j]
-
+```
 Question:
 Leetcode 200: Number of Islands
 Given a 2D grid map of '1's (land) and '0's (water), count the number of islands.
+
 Solution:
+```
 class Solution {
 public:
     void dfs(vector<vector<char>>& grid, int i, int j) {
@@ -41,11 +46,13 @@ public:
         return count;
     }
 };
-
+```
 Question:
 Leetcode 10: Regular Expression Matching
 Implement regular expression matching with support for '.' and '*'.
+
 Solution:
+```
 def isMatch(s, p):
     if not p:
         return not s
@@ -54,11 +61,13 @@ def isMatch(s, p):
         return isMatch(s, p[2:]) or (first_match and isMatch(s[1:], p))
     else:
         return first_match and isMatch(s[1:], p[1:])
-
+```
 Question:
 Leetcode 84: Largest Rectangle in Histogram
 Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
+
 Solution:
+```
 class Solution {
 public:
     int largestRectangleArea(vector<int>& heights) {
@@ -76,4 +85,4 @@ public:
         return maxArea;
     }
 };
-
+```
